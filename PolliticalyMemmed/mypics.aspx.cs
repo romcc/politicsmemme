@@ -51,7 +51,7 @@ namespace _PolliticalyMemmed
         protected void button_delete_Click(object sender, EventArgs e)
         {
             //Pridobi ime
-            string email = Convert.ToString(Session["username"]);
+            string picname = Convert.ToString(Session["pname"]);
 
             string constr = ConfigurationManager.ConnectionStrings["baza"].ConnectionString;
 
@@ -64,7 +64,7 @@ namespace _PolliticalyMemmed
                     using (MySqlDataAdapter sda = new MySqlDataAdapter())
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("picname", email);
+                        cmd.Parameters.AddWithValue("picname", picname);
                         cmd.Connection = con;
                         con.Open();
                         id = Convert.ToString(cmd.ExecuteScalar());

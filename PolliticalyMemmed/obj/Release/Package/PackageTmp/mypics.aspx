@@ -59,7 +59,8 @@
                             <p></p>
                             <div >
                             <br />
-                            <asp:Button ID="button_delete" runat="server" OnClick="button_delete_Click" Text="Delete picture" />
+                                <%#Session["pname"] = Eval("pname") %>
+                            <asp:Button ID="button_delete" runat="server" OnClick="button_delete_Click" id="Session["pname"]" Text="Delete picture" />
                         </div>
                         </div>
                          </ItemTemplate>

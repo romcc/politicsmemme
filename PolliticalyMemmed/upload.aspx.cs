@@ -29,7 +29,6 @@ namespace _PolliticalyMemmed
         protected void btnUpload_Click(object sender, EventArgs e)
         {
 
-            //Prebere id od zadje slike iz .xml datoteke
             string file_name = string.Empty;
             using (XmlTextReader reader = new XmlTextReader(Server.MapPath("file.xml")))
             {
@@ -45,7 +44,7 @@ namespace _PolliticalyMemmed
             string name = "upload/" + file_name + ".png";
             string comment = comment1.Text;
 
-            //Naloži sliko v mapo upload na serverju
+
             file_upload.SaveAs(Server.MapPath("upload") + "//" + file_name + ".png");
             if (System.IO.File.Exists(Server.MapPath("upload" + "//" + file_name + ".png")))
             {
@@ -74,12 +73,12 @@ namespace _PolliticalyMemmed
 
                     lblMessage.Text = "File Successfully Uploaded";
 
-                //Pretvori iz stringa v int in obratno
+
                 int file_name1 = Convert.ToInt16(file_name);
                 file_name1++;
                 file_name = Convert.ToString(file_name1);
 
-                //Zapiše nove podatke slik v xml datoteko
+
                 XmlWriterSettings settings = new XmlWriterSettings();
                 settings.Indent = true;
                 settings.Encoding = Encoding.UTF8;

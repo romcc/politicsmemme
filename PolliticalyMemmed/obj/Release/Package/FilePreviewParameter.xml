@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="politicalmeme" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\nejc__000\\Desktop\\ProjektPM\\ProjektPM\\9fag\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^C:\\Users\\nejc__000\\Desktop\\ProjektPM\\ProjektPM\\9fag\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="baza-Web.config Connection String" description="" value="Database=Memmed;Data Source=eu-cdbr-azure-west-d.cloudapp.net;User Id=b49a3099552da1;Password=6862ca34" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\nejc__000\\Desktop\\ProjektPM\\ProjektPM\\9fag\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='baza']/@connectionString" />
+  </parameter>
+</parameters>
